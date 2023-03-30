@@ -7,6 +7,7 @@ import ProfileView from "@/views/ProfileView.vue";
 import auth from "@/middleware/auth";
 import guest from "@/middleware/guest";
 import MakeAppointmentView from "@/views/MakeAppointmentView.vue";
+import MakeAppointmentSpecialityView from "@/views/MakeAppointmentSpecialityView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,6 +51,14 @@ const router = createRouter({
             path: '/make/appointment',
             name: 'make_appointment',
             component: MakeAppointmentView,
+            beforeEnter: (to, from, next) => {
+                auth(next);
+            },
+        },
+        {
+            path: '/make/appointment/:id',
+            name: 'make_appointment_speciality',
+            component: MakeAppointmentSpecialityView,
             beforeEnter: (to, from, next) => {
                 auth(next);
             },
