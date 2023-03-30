@@ -1,0 +1,16 @@
+.carousel-item > img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    left: unset;
+    right: unset;
+
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, .5);
+}
+.carousel-indicators {
+    margin-bottom: 1.5rem;
+}
