@@ -52,7 +52,7 @@ export default {
                 const {data} = await api.post('/users/auth', this.form)
                 if (data.message === 'success') {
                     localStorage.token = data.token;
-                    router.push({name: 'profile'})
+                    await router.push({name: 'profile'})
                 }
             } catch (e) {
                 console.log(e.response.data)

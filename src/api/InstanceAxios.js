@@ -10,7 +10,7 @@ function getHeaders(){
 }
 
 const api = axios.create({
-    baseURL: 'http://sergeiapi1/api',
+    baseURL: 'http://med/api',
     // headers: {
     //     ...getHeaders()
     // },
